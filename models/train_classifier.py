@@ -110,6 +110,14 @@ def save_model(model, model_filepath):
 
 
 def main():
+    '''main function to build, train, evaluate and save the model
+    
+         Parameters :
+                   database_filepath : database path where input message are stored
+                   model_filepath : path where the model shoulbe be saved.
+
+            Returns:
+                    model is saved under the filename defined by input parameters'''
     if len(sys.argv) == 3:
         database_filepath, model_filepath = sys.argv[1:]
         print('Loading data...\n    DATABASE: {}'.format(database_filepath))

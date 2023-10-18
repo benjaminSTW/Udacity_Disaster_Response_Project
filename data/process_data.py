@@ -1,3 +1,4 @@
+
 import sys
 import pandas as pd   
 from sqlalchemy import create_engine
@@ -73,6 +74,16 @@ def save_data(df, database_filename):
 
 
 def main():
+    '''
+    Main function to run the etl process.
+
+            Parameters:
+                    messages_filepath: filepath of raw messages
+                    categories_filepath : filenam of raw categories
+                    database_filepath : filenam of the database to store cleaned messages
+            Returns:
+                    database saved with cleaned messages
+    '''
     if len(sys.argv) == 4:
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]
