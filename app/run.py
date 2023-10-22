@@ -14,8 +14,6 @@ from sqlalchemy import create_engine
 
 app = Flask(__name__)
 
-url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
-
 def tokenize(text):
     '''
     Returns the list of cleaned words from the input message
